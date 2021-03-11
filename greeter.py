@@ -1,5 +1,5 @@
-prompt = 'If you tell us who you are, we can personalize the messages you see.'
-prompt += '\nWhat is your first name? '
+def greet_user(username):
+    '''Display a simple greeting.'''
+    print(f'Hello, {username.title()}!')
 
-name = input(prompt)
-print(f'\nHello {name}!')
+greet_user('ishaan')
