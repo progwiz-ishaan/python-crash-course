@@ -1,9 +1,6 @@
-prompt = '\nEnter the topping you would like on your pizza.'
-prompt += '\nEnter \'quit\' if you are done: '
+def make_pizza(*toppings):
+    """Print the list of toppings that have been requested."""
+    print(toppings)
 
-topping = ''
-while topping != 'quit':
-    topping = input(prompt)
-
-    if topping != 'quit':
-        print(f'{topping.title()} added on your pizza!')
+make_pizza('pepperoni')
+make_pizza('mushrooms', 'green peprers', 'extra cheese')
