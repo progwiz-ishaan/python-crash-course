@@ -16,4 +16,4 @@ while True:
         break
 
     formated_name = get_formated_name(f_name, l_name)
-    print(f"Hello, {formated_name}!")
+    print(f"\nHello, {formated_name}!")
