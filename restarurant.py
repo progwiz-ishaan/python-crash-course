@@ -5,13 +5,16 @@ class Restarurant:
         self.name = restarurunt_name
         self.is_veg = veggi
 
-    def describe_restarurunt(self):
-        print(f"This is {self.name.title()} restarurunt!")
+    def describe_restarurant(self):
+        print(f"This is {self.name.title()}!")
         if self.is_veg:
-            print("This restarunt is veg!")
+            print(f"{self.name.title()} is veg!")
         else:
-            print("This restrunt is non-veg!")
+            print(f"{self.name.title()} is non-veg!")
 
-    def open_restrunt(self):
-        print("This restarurunt has opened!")
+    def open_restarurant(self):
+        print(f"{self.name.title()} has opened!")
 
+my_restarurant = Restarurant('The BOOM restarurant', False)
+my_restarurant.describe_restarurant()
+my_restarurant.open_restarurant()
