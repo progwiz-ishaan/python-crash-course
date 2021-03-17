@@ -9,12 +9,12 @@ class Ship:
         self.screen_rect = ai_game.screen.get_rect()
 
         # Load the ship and get its rect.
-        seif.image = pygame.image.load('images/ship.bmp')
+        self.image = pygame.image.load('C:/Users/ishaa/Documents/Python-Scripts/python-crash-course/alien_invasion/images/ship.bmp')
         self.rect = self.image.get_rect()
 
         # Start each new ship at the bottom center of the screen.
         self.rect.midbottom = self.screen_rect.midbottom
-
+     
     def blitme(self):
         """Draw the ship at its current location."""
         self.screen.blit(self.image, self.rect)
