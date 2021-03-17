@@ -30,6 +30,12 @@ class AlienInvasion:
             self.bullets.update()
             self._update_screen()
 
+            # Get rid of the bullets that have dissapered.
+            for bullet in self.bullets.copy():
+                if bullet.rect.bottom <= 0:
+                    self.bullets.remove(bullet)
+            print(len(self.bullets))
+
     def _check_events(self):
         """Respond to the keypresses and the mouse events."""
         for event in pygame.event.get():
