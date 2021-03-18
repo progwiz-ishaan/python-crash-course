@@ -27,14 +27,8 @@ class AlienInvasion:
         while True:
             self._check_events()
             self.ship.update()
-            self.bullets.update()
+            self._update_bullets()
             self._update_screen()
-
-            # Get rid of the bullets that have dissapered.
-            for bullet in self.bullets.copy():
-                if bullet.rect.bottom <= 0:
-                    self.bullets.remove(bullet)
-            print(len(self.bullets))
 
     def _check_events(self):
         """Respond to the keypresses and the mouse events."""
@@ -70,6 +64,16 @@ class AlienInvasion:
         if len(self.bullets) < self.settings.bullets_allowed:
             new_bullet = Bullet(self)
             self.bullets.add(new_bullet)
+
+    def _update_bullets(self):
+        """Update the position of the bullets and get rid of the old bullets."""
+        # Update bullet position
+        self.bullets.update()
+
+        # Get rid of bullets that have dissapered.
+        for bullet in self.bullets.copy():
+            if bullet.rect.bottom <= 0:
+                self.bullets.remove(bullet)
 
     def _update_screen(self):
         """Update the screen."""
