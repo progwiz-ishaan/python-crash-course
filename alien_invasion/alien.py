@@ -1,0 +1,21 @@
+import pygame
+from pygame.sprite import Sprite
+
+class Alien(Sprite):
+    """A class to represent a single alien in the fleet."""
+
+    def __init__(self, ai_game):
+        """Initialize the alien and its starting position."""
+        super().__init__()
+        self.screen = ai_game.screen
+
+        # Load the alien image and set its rect attribute.
+        self.image = pygame.image.load('C:/Users/ishaa/Documents/Python-Scripts/python-crash-course/alien_invasion/images/alien.bmp')
+        self.rect = self.image.get_rect()
+
+        # Start each new ailen at the top left corner of the screen.
+        self.rect.x = self.rect.width
+        self.rect.y = self.rect.height
+
+        # Store the alien's exat horizontal position.
+        self.x = float(self.rect.x)
