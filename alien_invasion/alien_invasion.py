@@ -40,6 +40,8 @@ class AlienInvasion:
                 self._update_aliens()
                 self._update_bullets()
                 self._update_screen()
+            else:
+                sys.exit()
 
     def _check_events(self):
         """Respond to the keypresses and the mouse events."""
