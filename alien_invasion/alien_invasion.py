@@ -74,6 +74,10 @@ class AlienInvasion:
         """Update the position of the bullets and get rid of the old bullets."""
         # Update bullet position
         self.bullets.update()
+        if not self.aliens:
+            # Destory the exsisting bullets and create a new fleet
+            self.bullets.empty()
+            self._create_fleet()
 
         # Check for any bullets that have hit the aliens.
         # If so get rid of the bullet and the alien.
