@@ -91,10 +91,11 @@ class AlienInvasion:
         pygame.display.flip()
 
     def _check_fleet_edges(self):
-        """Respond to t"""
+        """Respond if the fleet touches edges."""
         for alien in self.aliens.sprites():
             if alien.check_edges():
-                self._change_fleet_direction
+                self._change_fleet_direction()
+                break
 
     def _change_fleet_direction(self):
         """Drop the entire fleet and change the fleet's direction."""
@@ -132,7 +133,11 @@ class AlienInvasion:
         self.aliens.add(alien)
 
     def _update_aliens(self):
-        """Update the position of all the aliens in the fleet."""
+        """
+        Update the position of all the aliens in the fleet.
+        And check if the fleet touches.
+        
+        """
         self._check_fleet_edges()
         self.aliens.update()
 
