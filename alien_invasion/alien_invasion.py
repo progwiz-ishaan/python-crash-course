@@ -91,7 +91,7 @@ class AlienInvasion:
 
                 # Get rid of any remaining aliens or bullets
                 self.aliens.empty()
-                self.bullets()
+                self.bullets.empty()
 
                 # Create a new fleet and center the ship.
                 self._create_fleet()
@@ -99,6 +99,9 @@ class AlienInvasion:
 
                 # Hide the mouse courser.
                 pygame.mouse.set_visible(False)
+
+                # Reset settingd
+                self.settings.initialize_dynamic_settings()
 
     def _fire_bullet(self):
         """Create a new bullet and add to the bullets list."""
@@ -127,6 +130,7 @@ class AlienInvasion:
             # Destory the exsisting bullets and create a new fleet
             self.bullets.empty()
             self._create_fleet()
+            self.settings.increse_speed_settings()
 
     def _update_screen(self):
         """Update the screen."""
