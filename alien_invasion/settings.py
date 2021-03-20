@@ -36,6 +36,9 @@ class Settings:
         self.bullet_speed = 3.0
         self.alien_speed = 1.0
 
+        # Scoring
+        self.alien_points = 50
+
         # Fleet direction of 1 represents right; -1 represents left.
         self.fleet_direction = 1
 
