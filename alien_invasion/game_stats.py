@@ -9,7 +9,11 @@ class GameStats:
         # Start the game in an active state
         self.game_active = False
 
+        # High scores should never reset.
+        self.high_score = 0
+
     def reset_stats(self):
         """Initialize statictics that can be changed during the game."""
         self.ships_left = self.settings.ship_limit
         self.score = 0
+        self.level = 1
