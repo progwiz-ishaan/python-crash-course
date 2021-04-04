@@ -17,3 +17,7 @@ def get_multiples(number, till):
         multiples.append(multiple)
 
     return multiples
+
+def check_factor(number, factor_to_check):
+    is_factor = number % factor_to_check == 0
+    return is_factor
