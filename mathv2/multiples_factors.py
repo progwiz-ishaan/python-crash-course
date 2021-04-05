@@ -11,7 +11,9 @@ def get_factors(number):
 
 def get_multiples(number, till):
     """Returns all the multiples of a given number till a given number."""
+    # Set up the variables.
     multiples = []
+    # Start the for loop.
     for number1 in range(1, till+1):
         multiple = number1 * number
         multiples.append(multiple)
@@ -20,22 +22,35 @@ def get_multiples(number, till):
 
 def check_factor(number, factor_to_check):
     """Gives true if the given number is a factor of another given number."""
-    is_factor = number % factor_to_check == 0
-    return is_factor
+    return number % factor_to_check == 0
 
 def check_multiple(number, multiple_to_check):
     """Gives true if the given number is a multiple of another given number."""
-    is_multiple = multiple_to_check % number == 0
-    return is_multiple
+    return multiple_to_check % number == 0
 
 def is_prime(number):
     """Returns true if the number given is prime."""
     return len(get_factors(number)) == 2
 
 def get_common_factors(number1, number2):
+    """Returns the common factors of both the numbers."""
+    # Set up the variables.
+    common_factors = []
+    # Get the factors of number1 and number2
     number1_factors = get_factors(number1)
     number2_factors = get_factors(number2)
-    all_factors = number1_factors[:] + number2_factors[:]
-    index = 0
-    for e in range(min(all_factors), max(all_factors)+1):
-        if number1_factors[index]
+    index = 0 # Keep track of which factor we are on.
+    # Check which list is shorter.
+    if len(number1_factors) > len(number2_factors):
+        shorter_list = number2_factors[:]
+    else:
+        shorter_list = number1_factors[:]
+    # Start the for loop.
+    for e in shorter_list:
+        # Append the current factor if the factors are common
+        if number1_factors[index] == number2_factors[index]:
+            common_factors.append(number2_factors[index])
+
+        index += 1 # Increse the value of index so it dosent remain 0.
+
+    return common_factors
