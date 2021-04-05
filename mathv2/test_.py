@@ -1,17 +1,17 @@
 import unittest
-import multiples_factors
+import multiples_factors as mf
 
 class TestV2Math(unittest.TestCase):
     """A test class for the v2math module."""
 
     def setUp(self):
         """Initialize attributes for setting up."""
-        self.factors = multiples_factors.get_factors(6)
-        self.multiples = multiples_factors.get_multiples(6, 4)
-        self.factor = multiples_factors.check_factor(6, 4)
-        self.multiple = multiples_factors.check_multiple(4, 8)
-        self.prime = multiples_factors.is_prime(5)
-        self.common_factors = multiples_factors.get_common_factors(10, 12)
+        self.factors = mf.get_factors(6)
+        self.multiples = mf.get_multiples(6, 4)
+        self.factor = mf.check_factor(6, 4)
+        self.multiple = mf.check_multiple(4, 8)
+        self.prime = mf.is_prime(5)
+        self.common_factors = mf.get_common_factors(10, 12)
 
     def test_get_factors(self):
         """Test get_factors()."""
