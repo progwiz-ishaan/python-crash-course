@@ -22,7 +22,7 @@ class TestV2Math(unittest.TestCase):
         self.assertEqual(self.multiples, [6, 12, 18, 24])
 
     def test_check_factor(self):
-        """Test check_factor."""
+        """Test check_factor()."""
         self.assertFalse(self.factor)
 
     def test_check_multiple(self):
