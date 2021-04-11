@@ -60,3 +60,14 @@ def get_common_factors(number1, number2):
 def get_common_multiples(number1, number2, number_of_multiples):
     """Returns common multiples of 2 given numbers."""
     # Set up the variables.
+    common_multiples = []
+    # Keep track var
+    index = 1
+    # Start the while loop.
+    while not len(common_multiples) == number_of_multiples:
+        number1_multiple = get_multiples(number1, index+1, from_=index)
+        number2_multiple = get_multiples(number2, index+1, from_=index)
+        if number1_multiple == number2_multiple:
+            common_multiples.append(number2_multiple)
+
+    return common_multiples
