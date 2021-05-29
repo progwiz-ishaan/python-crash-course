@@ -13,8 +13,6 @@ print(f"Status code: {r.status_code}")
 response_dict = r.json()
 repo_dicts = response_dict['items']
 repo_names, stars = [], []
-
-print("\nSelected information about each repositoriey:")
 for repo_dict in repo_dicts:
     repo_names.append(repo_dict['name'])
     stars.append(repo_dict['stargazers_count'])
