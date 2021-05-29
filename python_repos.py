@@ -25,6 +25,7 @@ data = [{
     'x': repo_names,
     'y': stars
 }]
+
 my_layout = {
     'title': 'Most-Starred Python Projects on Github',
     'xaxis': {'title': 'Repository'},
