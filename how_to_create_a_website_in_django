@@ -1,0 +1,6 @@
+1. Create virtual environment. ("cd path-to-example/example", "python3 -m venv ll_env": Type in terminal.)
+2. Activate the VE(virtual environment). ("source ll_env/bin/activate": Type in terminal.)
+3. Install Django. ("pip install django": Type in terminal.)
+4. Start a project. (" django-admin startproject project-name .", "ls", "ls project-name": Type in terminal.)
+5. Create database. ("python3 manage.py migrate", "ls": Type in terminal.)
+6. Viewing the project. ("python3 manage.py runserver": Type in terminal.)
